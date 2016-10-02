@@ -1,2 +1,5 @@
 # Spring_AOP
-Aspect-Oriented Programming with AspectJ
+
+
+<p>Taking a look into Aspect-Oriented Programming with AspectJ, using the Spring Framework.<p/>
+
