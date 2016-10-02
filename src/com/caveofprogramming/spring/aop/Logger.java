@@ -31,8 +31,8 @@ public class Logger
 	public void pointcutExecutionString()
 	{}
 	
-	//within PCD: for any method in Class specified
-	//@Deprecated means that this pointcut refers only to those classes having the @Deprecated annotation
+	// within PCD: for any method in Class specified
+	// @Deprecated means that this pointcut refers only to those classes having the @Deprecated annotation
 	@Pointcut("within(@Deprecated com.caveofprogramming.spring.aop.*)")
 	public void pointcutWithinDeprecated()
 	{}
@@ -42,24 +42,24 @@ public class Logger
 	public void pointcutTargetComponentClasses()
 	{}
 	
-	//@annotation will target all methods that are annotated with @Deprecated
+	// @annotation will target all methods that are annotated with @Deprecated
 	@Pointcut("@annotation(java.lang.Deprecated)")
 	public void pointcutAnnotatedMethods()
 	{}
 	
-	//@args will target any classe's method that takes as an argument an object of a @Component or @Deprecated e.t.c. Class
+	// @args will target any classe's method that takes as an argument an object of a @Component or @Deprecated e.t.c. Class
 	@Pointcut("@args(org.springframework.stereotype.Component)")
 	public void pointcutArgsOfAnnotatedClass()
 	{}
 	
-	//bean PCD will target all methods connected with a bean called "camera"
-	//bean(*camera) ->  all beans ending with camera e.t.c. or cam*ra...
+	// bean PCD will target all methods connected with a bean called "camera"
+	// bean(*camera) ->  all beans ending with camera e.t.c. or cam*ra...
 	@Pointcut("bean(camera)")
 	public void pointcutBean()
 	{}
 	
-	//args() will target all methods with not arguments
-	//args(int)->with an int argument and so on) + objects(full path) or args(int,*),  args(int,..*) = int and zero or more arguments
+	// args() will target all methods with no arguments
+	// args(int)->with an int argument and so on) + objects(full path) or args(int,*),  args(int,..*) = int and zero or more arguments
 	// args will try to match any arguemnts that can me casted to ours, so if we want to target only ints for example, we should say Integer or Double and so on.
 	@Pointcut("args(Double)")
 	public void pointcutArgsDouble()
@@ -143,7 +143,7 @@ public class Logger
 		}
 	}
 		
-	//We can combine two or more Pointcuts using logical expressions
+	// We can combine two or more Pointcuts using logical expressions
 	@Before("pointcutWithinDeprecated() && pointcutTargetComponentClasses()")
 	public void pointcutExecutionBeforeCombination()
 	{
