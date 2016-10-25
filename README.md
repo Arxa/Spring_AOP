@@ -1,4 +1,4 @@
-# Spring_AOP
+# Spring_AspectJ
 
 
 <p>Taking a look into <b>Aspect-Oriented Programming</b> with <b>AspectJ</b>, using the <b>Spring Framework</b>. </p>
